@@ -1,0 +1,39 @@
+وجودك بينا مش بس لحظه صداقه وتنتهي<br>
+كل يوم ونتي معانا ينحفر ب ذاكرتي ب كلامك الحلو 🤍<br>
+يارب بدايه سنه جديده من عمرك وهي كلها تفوق ونجاح وهداه ل بالك وصحتك بالعالي ان شاء الله<br>
+ويتحقق الي فبالك قريب 🤍🤍
+    </div>
+
+    <div class="card">
+من المهندس محمد 👷🏻‍♂️ إلى المهندسة مرام 💻<br><br>
+كل عام وأنتِ بخير…<br>
+يوم ميلاد سعيد مرمر 💻🎂
+    </div>
+
+  </div>
+</div>
+
+https://www.youtube.com/embed/33NxhNZbAJM?enablejsapi=1
+</iframe>
+
+<script>
+const btn=document.getElementById("startBtn");
+const story=document.getElementById("story");
+const cards=document.querySelectorAll(".card");
+const player=document.getElementById("player").contentWindow;
+
+btn.onclick=()=>{
+  btn.style.display="none";
+  story.style.display="flex";
+  player.postMessage(JSON.stringify({
+    event:"command",func:"playVideo",args:[]
+  }),"*");
+
+  cards.forEach((c,i)=>{
+    c.style.animationDelay=(i*1.5)+"s";
+  });
+};
+</script>
+
+</body>
+</html>
